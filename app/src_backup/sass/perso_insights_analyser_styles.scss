@@ -1,0 +1,694 @@
+/* BUZZ PANELS GLOBAL CSS v0.2 */
+
+@import "compass";
+@import "compass/css3";
+@import "compass/utilities";
+
+//color palette
+$primarycolor: #21c6ca;
+$primarycolor_hover: #5adcdf;
+
+$secondarycolor1: #2f3e79;
+$secondarycolor1_hover: #5364a5;
+
+$secondarycolor2: #ffffff;
+$secondarycolor2_hover: #ffffff;
+
+$dark: #404040;
+
+
+
+$brorange: #f6921e;
+$brorange_hover: #f7a447;
+
+
+
+$main-font: 'Open Sans', sans-serif;
+$title-font : 'Open Sans', sans-serif;
+
+
+/* --------------------------------------- */
+/* BOOTSTRAP GENERIC ELEMENTS:  */
+/* --------------------------------------- */
+
+
+html, body {
+    font-family: $main-font;
+    font-weight:300;
+    overflow-x: hidden;
+}
+
+a {
+    color: $primarycolor;
+
+    &.br{
+        color: $brorange;
+    }
+}
+a:hover {
+    color: $primarycolor_hover;
+
+    &.br{
+        color: $brorange_hover;
+    }
+}
+
+input {
+    border:0 !important;
+    box-shadow: none;
+    background:#eee !important;
+}
+
+label.error{
+    font-size:14px;
+    font-weight:300;
+    color:red;
+}
+
+.modal-open{
+    padding-right:0px !important;
+}
+.navbar {
+    padding: 0.5rem 1rem !important;
+}
+small{
+    font-size:12px;
+}
+
+.amcharts-chart-div{
+    a{
+        display:none !important;
+    }
+}
+
+
+/* --------------------------------------- */
+/* BOOTSTRAP BUTTONS:  */
+/* --------------------------------------- */
+
+.btn {
+    border: 0 none;
+    font-size:20px;
+    font-weight:300;
+    //text-transform:uppercase;
+    font-weight:400;
+    //@include border-radius(10px);
+}
+
+.btn-sm {
+    font-size:14px;
+}
+.btn-xs {
+    font-size:14px;
+    padding:0px 2px;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.btn:active { 
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: $primarycolor !important;
+}
+
+.btn-primary {
+    background: $secondarycolor1;
+    color: #ffffff;
+
+    &.br{
+        background: $brorange;
+    }
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: $secondarycolor1;
+    color:$primarycolor;
+    outline: none !important;
+    box-shadow: none;
+
+    &.br{
+        background: $brorange_hover;
+        color:#ffffff;
+    }
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: $secondarycolor1;
+    box-shadow: none;
+
+    &.br{
+        background: $brorange !important;
+    }
+}
+
+
+.btn-secondary {
+    background: $primarycolor;
+    color: $secondarycolor1;
+}
+ 
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
+    background: $primarycolor_hover;
+}
+ 
+.btn-secondary:active, .btn-secondary.active {
+    background: $primarycolor;
+    box-shadow: none;
+}
+
+.btn-social-connection{
+    background:grey;
+    font-size:16px;
+    color:white;
+
+    &.facebook {
+        background:#3b5998;
+    }
+
+    &.facebook:hover {
+        background:#8b9dc3;
+    }
+
+    &.facebook:active {
+        background:#8b9dc3 !important;
+    }
+
+    &.instagram {
+        background:#fb3958;
+    }
+
+    &.instagram:hover {
+        background:#f88094;
+    }
+
+    &.instagram:active {
+        background:#f88094 !important;
+    }
+}
+
+
+
+/* --------------------------------------- */
+/* NAVBAR:  */
+/* --------------------------------------- */
+
+.navbar {
+    font-size:14px;
+    font-weight:300;
+    background:$primarycolor !important;
+
+    &.navbar-br {
+        background:white !important;
+    }
+}
+
+.nav-link{
+    color:$secondarycolor1 !important;
+
+    &.br {
+        color:$dark !important;
+    }
+}
+.nav-link:hover{
+    color:white !important;
+
+    &.br:hover{
+        color: $brorange !important;
+    }
+}
+
+
+
+
+/* BOOTBOX  */
+/* --------------------------------------- */
+
+.modal{
+    direction:rtl;
+    overflow-y: auto;
+}
+
+.modal .modal-dialog{
+    direction:ltr;
+}
+
+.modal-open{
+    overflow:auto;
+}
+
+.credible_bootbox {
+
+    .modal-header{
+        background:$primarycolor;
+        color: white;
+
+        &.br{
+            background: $brorange !important;
+        }
+    }
+    .modal-body{
+        overflow:hidden;
+
+        img.watermark{
+            position:absolute;
+            top:0;
+            left:0;
+            opacity:0.1;
+            width:100%;
+        }
+
+        img.tinyicon{
+            float:left;
+            margin:0 20px 0 0;
+            display:block;
+            //opacity:0.1;
+            width:100px;
+        }
+    }
+
+    .bootbox-body{
+        //padding:3% !important;
+    }
+
+    .bootbox-close-button.close{
+        font-size:35px;
+        outline: none !important;
+    }
+    .modal-header{
+        display:inline;
+    }
+
+}
+
+
+.buzzradar_bootbox {
+    
+    @extend .credible_bootbox;
+
+    .modal-header{
+        background: $brorange !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------- */
+/* CONTENT  */
+/* --------------------------------------- */
+
+.section-title{
+    font-size:25px;
+}
+
+//Banner
+//---------------------------------------
+.banner{
+    color:black;
+    //height:400px;
+    @include background( image-url("http://www.credibleinfluence.com/analyserdemo/images/banner_minority.jpg") no-repeat white top center);
+    @include background-size(cover);
+
+    .container{
+        //background:orange;
+        padding:8% 0;
+    }
+
+    &.br {
+        @include background( image-url("http://www.buzzradar.com/ppc/landing-page-with-perso-insights/images/banner_minority_br.jpg") no-repeat white top center);
+        @include background-size(cover);
+    }
+}
+
+.banner_text_animation{
+    position:relative;
+    //height:150px;
+    //background: green;
+
+    .blinking_copy{
+        font-family: $title-font;
+        font-weight:300;
+        margin-bottom:10px;
+    }
+
+    .subheader {
+        font-size:23px;
+    }
+
+    .blinking_cursor{
+        display:inline-block;
+        width:5px;
+        height:32px;
+        background:$secondarycolor1;
+        animation: blink-animation 0.5s steps(5, start) infinite;
+        -webkit-animation: blink-animation 0.5s steps(5, start) infinite;
+    }
+
+}
+
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+
+
+//Image & Copy
+//---------------------------------------
+.img-copy{
+    
+    h4{
+        margin-bottom:20px;
+        font-family: $title-font;
+        font-weight:400;
+        line-height:150%;
+    }
+
+}
+
+.result-title{
+    font-family: $title-font;
+    font-weight:bold;
+}
+
+span.circle-number {
+  background: $secondarycolor1;
+  border-radius: 0.6em;
+  -moz-border-radius: 0.6em;
+  -webkit-border-radius: 0.6em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-right: 5px;
+  text-align: center;
+  width: 1.2em; 
+  font-size:18px;
+
+  &.br{
+    background: $brorange !important;
+  }
+
+  &.credible{
+    background: #21c6ca !important;
+  }
+
+  &.black {
+    background: #000 !important;
+  }
+}
+
+
+
+
+//Navigation Steps
+//---------------------------------------
+
+.assist-steps{
+    height:60px;
+}
+
+.step-item{
+    //background:orange;
+    //border:1px solid black;
+}
+
+.mt-step-number{
+    position:relative;
+    width:60px;
+    height:60px;
+    //background:green;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+.bz-svg-dot {
+    position:absolute;
+    width:60px;
+    height:60px;
+    background:transparent;
+    top:0px;
+    left:0px;
+}
+
+
+//Footer
+//---------------------------------------
+footer{
+    font-size:12px;
+    background:$secondarycolor1;
+    color:white;
+    padding:20px 0 5px 0;
+    //margin-top:20px;
+
+    .social-icons{
+
+    }
+
+    .buzzlogo{
+        position:absolute;
+        top:-2px;
+        right:100px;
+
+        img{
+            height:23px;
+        }
+    }
+
+    &.br{
+        background: $dark;
+    }
+
+}
+
+
+
+.preloader-spin{
+    padding:20% 0;
+    color:$primarycolor;
+}
+
+.bz-skip{
+    font-size:14px;
+    padding:0px 2px;
+    color: $primarycolor;
+    cursor:pointer;
+}
+
+.bz-page-messages{
+    color:red;
+    font-size:12px;
+}
+
+
+
+//Get In Touch
+//---------------------------------------
+.get-in-touch{
+    background:$primarycolor;
+    color:white;
+    //height:400px;
+
+    &.br{
+        background:#ffebd4 !important;
+        color: $dark !important;
+    }
+}
+
+.result-schedule-meeting{
+    
+    background:#ffebd4 !important;
+    color: $dark !important;
+    padding:25px 10px;
+    @include border-radius(10px);
+
+}
+
+
+
+
+
+/* --------------------------------------- */
+/* ASSISTANT CONTENT  */
+/* --------------------------------------- */
+
+.form-actions{
+    margin-top:30px;
+    border-top:1px solid #eee;
+    padding-top:20px;
+
+    &.no-border{
+        border:0;
+    }
+}
+
+.help-block{
+  
+    font-size:12px;
+
+    &.help-block-error{
+        color:red;
+    }
+
+    &.newsletter{
+        color: $secondarycolor1 !important;
+    }
+
+} 
+
+.form-check{
+    font-size:14px;
+}
+
+
+
+
+
+/* --------------------------------------- */
+/* AI Watson Video  */
+/* --------------------------------------- */
+
+.aiwatson_video{
+    
+    width: 100%;
+
+}
+
+
+
+
+//FLASH ANIMATION
+//---------------------------------------
+
+.flask_colour1 {
+    opacity:0;
+    fill:$primarycolor;
+}
+
+.flask_colour2 {
+    opacity:0;
+    fill:$secondarycolor1;
+
+    &.buzzradar{
+        fill: #404040 !important;
+    }
+}
+
+#flask_bottle {
+    @extend .flask_colour2;
+}
+
+#flask_heart {
+    @extend .flask_colour2;
+}
+
+#flask_brain {
+    @extend .flask_colour1;
+
+    &.buzzradar{
+        fill: $brorange !important;
+    }
+}
+
+#brain_circle1 {
+    @extend .flask_colour2;
+}
+
+#brain_circle2 {
+    @extend .flask_colour2;
+}
+
+#brain_circle3 {
+    @extend .flask_colour2;
+}
+
+
+
+
+
+
+.flask-container{
+    padding:30px 120px;
+    //border:1px solid #ddd;
+}
+
+
+
+
+
+
+
+/* --------------------------------------- */
+/* MEDIA QUERIES  */
+/* --------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    
+    .banner {
+        @include background( image-url("http://www.buzzradar.com/test/new_perso_ins/dist/images/banner_minority.jpg") no-repeat white top left);
+        @include background-size(cover);
+
+        .container{
+            //background:yellow;
+            width:85%;
+        }
+
+    }
+
+
+
+    .flask-container{
+        padding:0px 40px;
+        //border:1px solid #ddd;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+
+
+
+}
